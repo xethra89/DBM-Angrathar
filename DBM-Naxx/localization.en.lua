@@ -376,21 +376,21 @@ L:SetOptionLocalization({
 	specwarnP2Soon	= "Show special warning 10 seconds before Kel'Thuzad engages",
 	warnAddsSoon	= "Show pre-warning for Guardians of Icecrown",
 	BlastAlarm		= "Play custom siren sound when Frost Blast is being cast",
-	ShowRange		= "Show range frame when Phase 2 starts"
+	ShowRange		= "Show range frame when Phase 2 starts",
 	MindControl		= "Yell when Mind Controlled"
 })
 
 L:SetMiscLocalization({
-	Yell = "Minions, servants, soldiers of the cold dark! Obey the call of Kel'Thuzad!"
-	Yell2 = "Pray for mercy!"
-	Yell3 = "Scream your dying breath!"
-	Yell4 = "The end is upon you"
+	Yell = "Minions, servants, soldiers of the cold dark! Obey the call of Kel'Thuzad!",
+	Yell2 = "Pray for mercy!",
+	Yell3 = "Scream your dying breath!",
+	Yell4 = "The end is upon you",
 	KelThuzad = "Kel'Thuzad"
 })
 
 L:SetWarningLocalization({
 	specwarnP2Soon		= "Kel'Thuzad engages in 10 Seconds",
-	warnAddsSoon		= "Guardians of Icecrown incoming soon"
+	warnAddsSoon		= "Guardians of Icecrown incoming soon",
 	WarningMindControl 	= "Mind controlled! CC me!"
 })
 
