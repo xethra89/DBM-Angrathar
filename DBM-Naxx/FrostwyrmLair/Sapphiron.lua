@@ -22,7 +22,7 @@ local warnAirPhaseNow	= mod:NewAnnounce("WarningAirPhaseNow", 4, "Interface\\Add
 local warnLanded		= mod:NewAnnounce("WarningLanded", 4, "Interface\\AddOns\\DBM-Core\\textures\\CryptFiendBurrow.blp")
 
 local warnDeepBreath	= mod:NewSpecialWarning("WarningDeepBreath")
-local warnStomp			= mod:NewStompAnnounce(45185, 2)
+local warnStomp			= mod:NewSpellAnnounce(45185, 2)
 
 mod:AddBoolOption("WarningIceblock", true, "announce")
 
@@ -56,7 +56,7 @@ function mod:SPELL_CAST_SUCCESS(args)
 		warnDrainLifeSoon:Schedule(18.5)
 		timerDrainLife:Start()
 	elseif args:IsSpellID(45185) then
-		warnStomp:Start()
+		warnStomp:Show()
 		timerStomp:Start()
 	end
 end
