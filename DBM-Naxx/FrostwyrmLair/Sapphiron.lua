@@ -31,7 +31,7 @@ local timerAirPhase		= mod:NewTimer(66, "TimerAir", "Interface\\AddOns\\DBM-Core
 local timerLanding		= mod:NewTimer(28.5, "TimerLanding", "Interface\\AddOns\\DBM-Core\\textures\\CryptFiendBurrow.blp")
 local timerIceBlast		= mod:NewTimer(9.3, "TimerIceBlast", 15876)
 local enrageTimer		= mod:NewBerserkTimer(600)
---local timerStomp		= mod:NewNextTimer(10, 45185)
+local timerStomp		= mod:NewCDTimer(10, 45185)
 local noTargetTime = 0
 local isFlying = false
 
@@ -55,9 +55,9 @@ function mod:SPELL_CAST_SUCCESS(args)
 		warnDrainLifeNow:Show()
 		warnDrainLifeSoon:Schedule(18.5)
 		timerDrainLife:Start()
-	--elseif args:IsSpellID(45185) then
-	--	warnStomp:Start()
-	--	timerStomp:Start()
+	elseif args:IsSpellID(45185) then
+		warnStomp:Show()
+		timerStomp:Start()
 	end
 end
 
