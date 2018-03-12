@@ -21,13 +21,13 @@ local warnChargeChanged		= mod:NewSpecialWarning("WarningChargeChanged")
 local warnChargeNotChanged	= mod:NewSpecialWarning("WarningChargeNotChanged", false)
 local warnThrow				= mod:NewSpellAnnounce(28338, 2)
 local warnThrowSoon			= mod:NewSoonAnnounce(28338, 1)
-local warnStomp				= mod:NewStompAnnounce(28125, 1)
+--local warnStomp				= mod:NewStompAnnounce(28125, 1)
 
 local enrageTimer			= mod:NewBerserkTimer(365)
 local timerNextShift		= mod:NewNextTimer(20, 28089)
 local timerShiftCast		= mod:NewCastTimer(3, 28089)
 local timerThrow			= mod:NewNextTimer(27.2, 28338)
-local timerStomp			= mod:NewCDTimer(10, 45185) 
+--local timerStomp			= mod:NewCDTimer(10, 45185) 
 
 mod:AddBoolOption("ArrowsEnabled", false, "Arrows")
 mod:AddBoolOption("ArrowsRightLeft", false, "Arrows")
@@ -118,12 +118,12 @@ function mod:CHAT_MSG_RAID_BOSS_EMOTE(msg)
 	end
 end
 
-function mod:SPELL_CAST_SUCCESS(args)
-	if args:IsSpellID(45185) then
-		warnStomp:Show()
-		timerStomp:Start()
-	end	
-end
+--function mod:SPELL_CAST_SUCCESS(args)
+--	if args:IsSpellID(45185) then
+--		warnStomp:Show()
+	--	timerStomp:Start()
+	--end	
+--end
 
 function mod:TankThrow()
 	if not self:IsInCombat() or phase2 then
