@@ -12,8 +12,8 @@ mod:EnableModel()
 mod:RegisterEvents(
 	"SPELL_CAST_START",
 	"CHAT_MSG_RAID_BOSS_EMOTE",
-	"UNIT_AURA",
-	"SPELL_CAST_SUCCESS"
+	"UNIT_AURA"
+	--"SPELL_CAST_SUCCESS"
 )
 
 local warnShiftCasting		= mod:NewCastAnnounce(28089, 3)
